@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+button,
+input {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.app{
+  margin: 0px 50px;
+}
+
+.blogList-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+}
+
+@media (max-width: 768px) {
+  .blogList-wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .blogList-wrap {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.blogItem-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.blogItem-cover {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
+}
+.blogItem-wrap h3 {
+  margin: 0.5rem 0 0.4rem 0;
+  flex: 1;
+}
+
+.comment-input{
+  background-color: #f3f2f2 !important;
+  border: none !important;
+  padding: 8px 10px;
+  padding-right: 80px !important;
+  width: 100%;
+  border: 2px solid black !important;
+  font-size: 20px !important;
+  transition: all 0.3s linear;
+  border-radius: 15px;
+}
+
+.blogItem-desc {
+  position: relative;
+  max-height: 50px;
+  overflow: hidden;
+  padding-right: 0.6rem;
+  font-size: 0.8rem;
+  color: #a9a9a9;
+  margin-bottom: 0px !important;
+}
+
+.blogItem-desc::before {
+  position: absolute;
+  content: '...';
+  bottom: 0;
+  right: 0;
+}
+
+.blogItem-wrap footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blogItem-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.blogItem-author {
+  display: flex;
+  align-items: center;
+}
+
+.blogItem-author img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.5rem;
+}
+
+.blogItem-author p {
+  font-size: 0.6rem;
+  color: #a9a9a9;
+  font-weight: 600;
+}
+
+.blog-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.blog-goBack {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #a9a9a9;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  display: block;
+}
+.blog-wrap header {
+  text-align: center;
+}
+
+.blog-date {
+  font-size: 0.8rem;
+  color: #a9a9a9;
+  font-weight: 500;
+}
+
+.blog-wrap img {
+  width: 100%;
+}
+
+.blog-desc {
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+
+.emptyList-wrap {
+  display: flex;
+  justify-content: center;
+}
+.emptyList-wrap img {
+  max-width: 250px;
+  width: 100%;
+}
+
+.chip {
+  font-size: 0.7rem;
+  background: linear-gradient(to right, #6190e8, #a7bfe8);
+  color: #fff;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  width: fit-content;
+  text-transform: capitalize;
+  margin-bottom: 0px !important;
+}
+
+.main {
+  display: flex;
+}
+
+.register, .login{
+  display: flex;
+  justify-content: space-between;
+}
+
+.log-sign-right {
+  height: 100vh;
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.signin-left {
+  background-image: url("./assets/signin.jpg");
+  height: 80vh;
+  position: relative;
+  top: 10vh;
+  width: 48%;
+  background-size: cover;
+  background-position: center;
+}
+
+.login-left {
+  background-image: url("./assets/login.jpg");
+  height: 80vh;
+  position: relative;
+  top: 10vh;
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+.login-left input {
+  background-color: #f3f2f2 !important;
+  border: none !important;
+  padding: 8px 10px !important;
+  width: 100%;
+  border: 2px solid black !important;
+  font-size: 20px !important;
+  transition: all 0.3s linear;
+}
+
+/* input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border: 2px solid rgb(5, 178, 178) !important;
+  box-shadow: 0 0 0px;
+  font-size: 20px;
+} */
+
+button {
+  width: 200px;
+}
+
+form a {
+  color: #007bff !important;
+  text-decoration: underline !important;
+}
+
+form a:hover {
+  color: #0167d4 !important;
+}
+
+@media screen and (max-width: 756px) {
+  .signin-left,
+  .login-left {
+    display: none;
+  }
+}
+
+.dropdown-toggle::after{
+  display: none !important;
+}
+
+.MuiOutlinedInput-input, .MuiInput-input{
+  border: 0px !important;
+  background-color: white !important;
+}
+
+.MuiOutlinedInput-input:focus, .MuiInput-input:focus{
+  border: 0px !important;
+}
+
+.page-not-found{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20%;
+  flex-direction: column;
+}
